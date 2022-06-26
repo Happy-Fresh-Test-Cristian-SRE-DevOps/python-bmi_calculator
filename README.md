@@ -1,5 +1,4 @@
 # Simple App | Body-Mass Index (BMI)
-Exercise to make program Body-Mass Index (BMI) with Flask in Python. :D
 
 Rumus:
 ```
@@ -28,16 +27,9 @@ Output:
 ## Method-2: Dockerize this Apps (Run inside Docker Container)
 You can dockerize this app with following command, btw i use `python:3.8-alpine`. You can see or custome image in `Dockerfile`:
 ```
-docker build -t bmi:v1 . --no-cache
+docker build -t {name_of_docker}:{tag_image} . --no-cache
 ```
 and, Run:
 ```
-docker run -d --rm --name bmi -p 5000:5000 bmi:v1
+docker run -d --rm --name {name_container} -p 5000:5000 {name_of_docker}:{tag_image}
 ```
-
-## Verify
-To verify the program running, try with accessing the url like this: `http://localhost:5000/?height=167&weight=70` and you can custom value `heigh` and `weight`. If there are bug, please info me. :D
-
-Output:
-
-![result](img/bmi.png)
