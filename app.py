@@ -1,8 +1,10 @@
 from flask import Flask, request
+import unittest
 
 app = Flask(__name__)
 
 @app.route('/')
+# class FunctionBMI(unittest.TestCase):
 def bmi():
     # get query args
     h = request.args['height']
@@ -34,3 +36,4 @@ def bmi():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
+    unittest.main()
